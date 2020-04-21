@@ -4,21 +4,19 @@
         <section class="sticky">
             <div class="title">To-Do:</div>
             <div class="outputContainer" id="output">
-                <div class="output"></div>
-                <div class="output"></div>
                 <div class="output">stuff i just typed</div>
                 <div class="output">next thing I typed</div>
                 </div>
                 <div class="footer">
                     <!-- https://stackoverflow.com/questions/2774841/best-way-to-add-comments-in-erb -->
-                  <!-->  <input type="text" id="textbox01" placeholder="Your Sticky" class="textinput interfacetext"/> -->
+                    <!--  <input type="text" id="textbox01" placeholder="Your Sticky" class="textinput interfacetext"/> -->
                     
                     <!-- form attributes => -->
                     
                     <!-- https://edgeguides.rubyonrails.org/form_helpers.html -->
 
                     <!-- [1, 2, 3].each do |i| puts i end -->
-                    <div class="textinput interfacetext"/>
+                    <!--<div class="textinput interfacetext">-->
                     <%= form_for(Card.new) do |form| %>
                       <%= form.label :body %><br>
                       <%= form.text_field :body %>
@@ -27,12 +25,11 @@
                       <%= form.label :due %><br>
                       <%= form.text_field :due %>
                     <% end %>
-<>/div
-                    <div class="interface">
+                   <!-- <div class="interface">-->
                         <button onclick="createSticky()" type='submit'>Stick it! </button>
-                        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+                        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'/>
 
-                        #<button class="addCard" onclick="createCard()"></button>
+                        <button class="addCard" onclick="createCard()"></button>
                     </div>
                 </div>
             </div>

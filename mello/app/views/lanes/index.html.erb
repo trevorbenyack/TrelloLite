@@ -17,19 +17,19 @@
 
                     <!-- [1, 2, 3].each do |i| puts i end -->
                     <!--<div class="textinput interfacetext">-->
-                    <%= form_for(@card) do |form| %>
+                    <%= form_with model: @card do |form| %>
                       <%= form.label :body %><br>
                       <%= form.text_field :body %>
-                      <%= form.label :priority %><br>
+                      <br><%= form.label :priority %><br>
                       <%= form.text_field :priority %>
-                      <%= form.label :due %><br>
+                      <br><%= form.label :due %><br>
                       <%= form.text_field :due %>
-                      <%= form.submit%>
-                    <% end %>
-                   <!-- <div class="interface">-->
-                        <button onclick="createSticky()" type='submit'>Stick it! </button>
-                        <button class="addCard" onclick="createCard()"></button>
+                      
+                    
+                   <div class="textsend" onclick="window.updateCard()">
+                        <%= form.submit%>
                     </div>
+                    <% end %>
                 </div>
             </div>
         </section>

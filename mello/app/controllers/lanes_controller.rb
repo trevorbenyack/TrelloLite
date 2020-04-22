@@ -5,6 +5,8 @@ class LanesController < ApplicationController
         @all_cards = Card.all
     end        
 
+
+    
     def create
         @lane.save
         redirect_to lanes_path

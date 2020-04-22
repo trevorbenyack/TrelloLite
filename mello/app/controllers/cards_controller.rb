@@ -5,7 +5,6 @@ class CardsController < ApplicationController
         @card.lane_id = 1
         if @card.save
             flash[:success] = "Great! Your card has been created!"
-            redirect_to root_path
         else
             flash.now[:error] = "rats! Fix your mistake!"
             render plain: params[:card].inspect
@@ -16,5 +15,5 @@ class CardsController < ApplicationController
     private
     def card_params
         params.require(:card).permit(:body, :priority, :due)
-      end
+    end
 end

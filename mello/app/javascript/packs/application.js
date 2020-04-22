@@ -15,3 +15,10 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+window.updateCard = function() {
+    let body = document.getElementById("card_body").value;
+
+    console.log(document.getElementById("card_body"));
+    document.getElementById("output").innerHTML += `<div class="output">${body}</div>`;
+}

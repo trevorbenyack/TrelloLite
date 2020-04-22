@@ -90,6 +90,8 @@
      justify-content: center;
      width: 276px;
      background-color:rgb(39, 76, 106);
+     font-size: 20px;
+     color: white;
  }
  .interfacetext {
      width: 100%;

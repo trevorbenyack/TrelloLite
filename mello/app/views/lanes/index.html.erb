@@ -17,18 +17,17 @@
 
                     <!-- [1, 2, 3].each do |i| puts i end -->
                     <!--<div class="textinput interfacetext">-->
-                    <%= form_for(Card.new) do |form| %>
+                    <%= form_for(@card) do |form| %>
                       <%= form.label :body %><br>
                       <%= form.text_field :body %>
                       <%= form.label :priority %><br>
                       <%= form.text_field :priority %>
                       <%= form.label :due %><br>
                       <%= form.text_field :due %>
+                      <%= form.submit%>
                     <% end %>
                    <!-- <div class="interface">-->
                         <button onclick="createSticky()" type='submit'>Stick it! </button>
-                        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'/>
-
                         <button class="addCard" onclick="createCard()"></button>
                     </div>
                 </div>

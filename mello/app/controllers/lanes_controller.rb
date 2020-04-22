@@ -1,14 +1,12 @@
 class LanesController < ApplicationController
     def index
-        @new_card = Card.new(priority: 3)
+        @card = Card.new
         @all_lanes = Lane.all
         @all_cards = Card.all
     end        
 
     def create
-        @new_lane = lane.new
-        @new_lane.name = params[:name]
-        @new_lane.save
-        redirect_to @new_lane
+        @lane.save
+        redirect_to lanes_path
     end
 end

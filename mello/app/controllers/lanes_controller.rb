@@ -3,10 +3,8 @@ class LanesController < ApplicationController
         @card = Card.new
         @all_lanes = Lane.all
         @all_cards = Card.all
-    end        
+    end     
 
-
-    
     def create
         @lane.save
         redirect_to lanes_path

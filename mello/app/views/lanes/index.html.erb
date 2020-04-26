@@ -32,6 +32,15 @@
             <div class="outputContainer" id="output">
                 <div class="output">stuff i just typed</div>
                 <div class="output">next thing I typed</div>
+
+
+                
+                <!-- This is where our loop goes to display card -->
+                <% @all_cards.each do |cardbody| -%>
+                    <div class="output"><%= cardbody.body -%></div>
+                <% end -%>
+
+
                 </div>
         </section>
     </div>

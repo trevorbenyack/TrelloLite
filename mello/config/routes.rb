@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   resources :lanes
 
   post "new_card" => "cards#create"
-  
 end
